@@ -1,0 +1,4 @@
+/* Estilos mínimos — importe o manual de marca na versão final */
+body{font-family:system-ui,Arial;margin:0;color:#111;background:#fff}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:#F3F3F3;border-bottom:1px solid #ddd}
+.container{padding:24px}
