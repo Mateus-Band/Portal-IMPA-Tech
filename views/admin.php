@@ -1,1 +1,0 @@
-<!doctype html><html lang="pt-br"><head><meta charset="utf-8"><title>Admin</title></head><body><h1>Painel Administrativo</h1><p>Área restrita. Integre com OAuth do Google e controle de permissões.</p></body></html>
