@@ -1,10 +1,21 @@
 <?php ob_start(); ?>
 
-<h2 class="text-3xl font-bold mb-4">Disciplinas</h2>
-<p class="text-gray-700 dark:text-gray-300">Lista de disciplinas (protótipo visual).</p>
+<h1 class="text-2xl font-bold text-blue-700 mb-6">Disciplinas</h1>
 
-<?php 
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <?php foreach ($disciplines as $d): ?>
+        <a href="/disciplines/<?= htmlspecialchars($d['slug']) ?>"
+           class="block bg-white border border-gray-200 shadow-sm p-4 rounded-lg hover:shadow-md transition">
+           
+            <h3 class="text-lg font-semibold text-blue-700">
+                <?= htmlspecialchars($d['name']) ?>
+            </h3>
+        </a>
+    <?php endforeach; ?>
+</div>
+
+<?php
 $content = ob_get_clean();
-$pageTitle = 'Disciplinas - Portal IMPA Tech';
+$pageTitle = 'Disciplinas';
 include __DIR__ . '/../layouts/main.php';
 ?>
