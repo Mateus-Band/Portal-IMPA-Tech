@@ -1,0 +1,46 @@
+# Vendor & Dependencies
+/vendor/
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log
+
+# Generated CSS
+/public/assets/css/styles.css
+
+# Environment
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# System Files
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Cache
+**/.cache/
+.phpunit.cache/
+
+# Docker
+docker/*.log
+docker/*.pid
+
+# Composer
+composer.lock
+
+# Build artifacts
+*.tmp
+*.temp
+
+# OS
+.DS_Store
+Thumbs.db
