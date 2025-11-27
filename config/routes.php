@@ -159,7 +159,11 @@ route('GET', '/disciplines/{slug}', function($params) {
     }
 
     $data = $all[$slug];
-    render('pages/discipline', ['slug' => $slug, 'data' => $data]);
+    render('pages/discipline', [
+        'slug' => $slug,
+        'title' => $data['title'],
+        'desc'  => $data['desc'],
+    ]);
 });
 
 // Projects
@@ -174,31 +178,6 @@ route('GET', '/projects', function() {
 // Admin (visual only)
 route('GET', '/admin', function() {
     render('pages/admin');
-});
-
-route('GET', '/', function() {
-    $mockProjects = [
-        [
-            'id' => 1,
-            'title' => "Projeto de Visualização 3D",
-            'description' => "Exploração de superfícies e teoremas com gráficos interativos.",
-        ],
-        [
-            'id' => 2,
-            'title' => "Sistema de Entrega de Trabalhos",
-            'description' => "Protótipo do sistema usado para submissão de PDFs e feedback.",
-        ],
-        [
-            'id' => 3,
-            'title' => "Portal de Disciplinas",
-            'description' => "Visão geral das disciplinas e materiais do curso.",
-        ],
-    ];
-
-    render('pages/home', [
-        'mockProjects' => $mockProjects,
-        'title' => 'Portal IMPA Tech'
-    ]);
 });
 
 /* You can add more routes here... */

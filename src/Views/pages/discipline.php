@@ -1,11 +1,11 @@
 <?php ob_start(); ?>
 
 <h1 class="text-2xl font-bold text-blue-700 mb-4">
-    <?= htmlspecialchars($data['title']) ?>
+    <?= htmlspecialchars($title) ?>
 </h1>
 
 <p class="text-gray-700 mb-8">
-    <?= htmlspecialchars($data['desc']) ?>
+    <?= htmlspecialchars($desc) ?>
 </p>
 
 <a href="/disciplines" class="text-blue-600 underline hover:text-blue-800">
@@ -14,6 +14,6 @@
 
 <?php
 $content = ob_get_clean();
-$pageTitle = $data['title'];
+$pageTitle = $title;
 include __DIR__ . '/../layouts/main.php';
 ?>
